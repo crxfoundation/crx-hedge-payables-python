@@ -1,0 +1,11 @@
+$ python hedge.py    # 2026-11-17T21:51:16Z, crx-python v0.3.21
+CRX            payables hedge: read-only
+GET /health    ok, healthy true, chain ethereum 1, core 0x0d716ca9fc2bfd8c66d2af2fb38b56d08809a8cc
+GET /markets   USD/BRL open, notional 100 to 10000000 USD
+GET /markets   USD/MXN open, notional 100 to 10000000 USD
+Payable        USD/BRL 25000 USD due in 30 d, BRL invoice, Sao Paulo supplier
+POST /rfqs     sell 25000 USD/BRL, settles 2026-12-17T16:00:00Z, not sent
+Payable        USD/MXN 10000 USD due in 60 d, MXN invoice, Monterrey supplier
+POST /rfqs     sell 10000 USD/MXN, settles 2027-01-18T16:00:00Z, not sent
+Done           read-only, nothing sent. Set CRX_WALLET_PK, then run with --quote or --accept.
+exit 0
